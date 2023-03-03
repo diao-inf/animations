@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --noire: black;
+    --gris: gray;
+    --rouge: #D20024;
+    --noire2: #1E1F29;
+    --blanche: white;
+    --verte:#00d20e;
+    --marron:rgb(59, 39, 39);
+}
+
+
+.carre{
+    position: relative;
+    margin: auto auto;
+   margin-top: 20rem;
+   width: 20rem;
+   height: 5rem;
+   border: 0.5rem solid var(--gris);
+   font-size: 3rem;
+   text-transform: capitalize;
+   text-align: center;
+   background-color: var(--noire2);
+   color: var(--blanche);
+   overflow: hidden;
+}
+
+.carre h1{
+    font-size: 3rem;
+}
+.carre h1:last-child{
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* animation: animText 1.5s infinite; */
+}
+.carre:hover h1:last-child{
+    animation: animText 0.75s;
+}
+
+@keyframes animText {
+    from{
+        transform: scale(10);
+        opacity: 0;
+    }
+    to{
+        transform: scale(100%);
+        opacity: 1;
+    }
+}

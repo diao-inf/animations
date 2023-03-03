@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --noire: black;
+    --gris: gray;
+    --rouge: #D20024;
+    --noire2: #1E1F29;
+    --blanche: white;
+    --verte:#00d20e;
+}
+.container{
+    perspective: 50px;
+}
+
+.carre{
+    color: var(--rouge);
+    position: relative;
+    margin: auto auto;
+   margin-top: 20rem;
+   padding-top: 20px;
+   width: 20rem;
+   height: 5rem;
+   font-size: 3rem;
+   text-transform: capitalize;
+   text-align: center;
+   transition-duration: 0.2s;
+   transition-delay: 0.3s;
+   z-index: 2;
+}
+
+.cercle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--rouge);
+    position: absolute;
+    top:50%;
+    left: 40%;
+    transform: translate(150%,-50%);
+    opacity: 0;
+    transition-duration: 0.2s;
+    z-index: -1;
+}
+.carre div:first-child::after, .carre div:last-child::after{
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--rouge);
+    position: absolute;
+    transform: translateX(150%);
+    opacity: 0;
+    transition-duration: 0.2s;
+}
+
+.carre div:first-child{
+    /* transform: translate(-150%,-50%); */
+    transform: translate(700%,-50%);
+}
+
+.carre div:last-child{
+    /* transform: translate(50%,-50%); */
+    transform: translate(-780%,-50%);
+}
+
+.carre:hover div:first-child{
+    transform: translate(-150%,-50%);
+    opacity: 1;
+}
+.carre:hover div:last-child{
+    transform: translate(50%,-50%);
+    opacity: 1;
+}
+.carre:hover div:first-child::after{
+    opacity: 1;
+}
+.carre:hover div:last-child::after{
+    opacity: 1;
+}
+.carre:hover{
+    background-color: var(--rouge);
+    color: var(--blanche);
+}

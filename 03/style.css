@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --noire: black;
+    --gris: gray;
+    --rouge: #D20024;
+    --noire2: #1E1F29;
+    --blanche: white;
+    --verte:#00d20e;
+}
+
+
+.carre{
+    position: relative;
+    margin: auto auto;
+   margin-top: 20rem;
+   width: 20rem;
+   height: 5rem;
+   border: 0.5rem solid var(--gris);
+   font-size: 3rem;
+   text-transform: capitalize;
+   text-align: center;
+}
+
+.txt{
+    transform: translateY(25%);
+    color: var(--rouge);
+ }
+
+ .vertical{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 25%;
+    right: 50;
+    background-color: var(--verte);
+
+ }
+
+ .horizon{
+    position:absolute;
+    width: 100%;
+    height: 40%;
+    top: 40%;
+    bottom: 50%;
+    background-color: var(--verte);
+    transform: height 2s;
+ }
+ .carre:hover .horizon{
+    animation: pharmacie-ani-ho 2s;
+ }
+ .carre:hover .vertical{
+    animation: pharmacie-ani-ve 2s;
+ }
+ 
+
+ @keyframes pharmacie-ani-ho {
+    from{
+        transform: scale(1,0);
+        opacity: 0;
+    }
+    50%{
+    }
+    to{
+        transform: scale(1,1);
+        opacity: 1;
+    }
+ }
+
+ @keyframes pharmacie-ani-ve {
+    from{
+        transform: scale(0,1);
+    }
+    50%{
+    }
+    to{
+        transform: scale(1,1);
+    }
+ }

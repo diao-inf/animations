@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --noire: black;
+    --gris: gray;
+    --rouge: #D20024;
+    --noire2: #1E1F29;
+    --blanche: white;
+    --verte:#00d20e;
+}
+.container{
+    perspective: 50px;
+}
+
+.carre{
+    position: relative;
+    margin: auto auto;
+   margin-top: 20rem;
+   width: 20rem;
+   height: 5rem;
+   border: 0.5rem solid var(--gris);
+   font-size: 3rem;
+   text-transform: capitalize;
+   text-align: center;
+   overflow: hidden;
+}
+
+.carre::before 
+{
+    content: "Hoverable";
+    font-size: 3rem;
+    color: var(--blanche);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--noire);
+    bottom: 0;
+    left: 0;
+    transform: translateX(0);
+    transition-duration: 3s;
+}
+
+.carre::after 
+{
+    content: "Hoverable";
+    font-size: 3rem;
+    color: var(--blanche);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--noire);
+    bottom: 0;
+    right: 0;
+    transform: translateX(0);
+    transition-duration: 3s;
+}
+
+.carre:hover::before{
+    transform: translateX(100%) scale(0);
+    opacity: 0;
+}
+.carre:hover::after{
+    transform: translateX(-100%) scale(0);
+    opacity: 0;
+}
